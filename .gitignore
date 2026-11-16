@@ -1,0 +1,9 @@
+/target/
+/artifacts/
+*.log
+.agents/
+.sober/
+/assets/*.png
+/docs/preview-private.png
+
+*.kate-swp

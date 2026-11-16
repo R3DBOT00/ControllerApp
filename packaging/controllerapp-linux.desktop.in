@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=ControllerApp Linux
+Comment=Native controller input and keyboard overlay for Wayland
+Exec="@BINARY@"
+Terminal=false
+NoDisplay=true
+X-GNOME-Autostart-enabled=true

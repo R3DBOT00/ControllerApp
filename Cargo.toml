@@ -1,0 +1,30 @@
+[package]
+name = "controllerapp-linux"
+version = "2.0.0"
+edition = "2024"
+description = "Controller desktop input and Xbox 360 keyboard overlay for KDE Wayland"
+exclude = ["artifacts/", "docs/preview-private.png"]
+
+[features]
+default = ["private-assets"]
+# Embedded A/B/X/Y PNG legends.
+private-assets = []
+
+[dependencies]
+gtk = { package = "gtk4", version = "0.11", features = ["v4_18"] }
+gtk4-layer-shell = "0.8.1"
+evdev = "0.13.2"
+fs2 = "0.4"
+zbus = "5"
+atspi = "0.30"
+futures-lite = "2"
+cairo-rs = { version = "0.22", features = ["png"] }
+pangocairo = "0.22"
+ctrlc = { version = "3", features = ["termination"] }
+
+[profile.release]
+lto = "thin"
+strip = true
+
+[profile.dev]
+debug = 0
